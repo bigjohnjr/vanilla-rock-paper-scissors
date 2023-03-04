@@ -6,16 +6,18 @@ let choiceButtons = document.querySelectorAll(".choiceButton");
 let computer;
 let player;
 
+// Function that handles the player choice and calls the computers choice
 choiceButtons.forEach((button) => {
   button.addEventListener("click", () => {
     player = button.id.toUpperCase();
     computerPlay();
     playerText.textContent = `Player: ${player}`;
-    computerText.innerHTML = `Computer: ${computer}`;
+    computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = "Result:" + " " + winnerResult();
   });
 });
 
+// Computer decision based on random number selection
 function computerPlay() {
   let randomChoice = Math.floor(Math.random() * 3) + 1;
 
@@ -32,6 +34,7 @@ function computerPlay() {
   }
 }
 
+// Determines outcome of the game
 function winnerResult() {
   if (player == computer) {
     return "Draw";
