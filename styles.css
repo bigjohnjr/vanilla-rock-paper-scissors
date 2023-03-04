@@ -1,0 +1,12 @@
+.game {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.choiceButton {
+  font-size: 60px;
+  border: none;
+  background: transparent;
+  margin: 0 15px;
+}
